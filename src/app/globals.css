@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'MADE Dillan';
+  src: url('/fonts/MADE Dillan PERSONAL USE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-custom: 'MADE Dillan', sans-serif;
 }
 
 @theme inline {
@@ -10,17 +19,36 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #13181E;
+    --foreground: #fefefe;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+.menu-button {
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.menu-button:hover {
+  border-bottom: 2px solid var(--foreground);
+  padding-bottom: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Classe para aplicar a fonte customizada */
+.font-custom {
+  font-family: var(--font-custom);
 }
