@@ -9,9 +9,7 @@ export default function TopBar() {
       </div>
       <div className="flex items-center gap-4">
         <button className="menu-button">Inicio</button>
-        <button className="menu-button">Sobre</button>
         <button className="menu-button">Contribua</button>
-        <button className="menu-button">Contato</button>
       </div>
     </div>
   );
